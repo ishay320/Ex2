@@ -1,3 +1,3 @@
 
-double *bankAcoont[50];
-void bankCMD();
+int bankCMD();
+int accountInput(double bankAccount[50][2]);
