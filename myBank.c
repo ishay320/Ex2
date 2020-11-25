@@ -38,3 +38,13 @@ void bankCMD(){
     }
    }
 }
+
+int open(double* bankAcounts[]){
+    int accountNumber = 0;
+        scanf("%o",&accountNumber);
+        if (bankAcounts[accountNumber]!=NULL)
+        {
+            
+        }
+        
+}
