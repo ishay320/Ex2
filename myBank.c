@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 enum bool
 {
     false,
@@ -21,8 +22,6 @@ int bankCMD()
         printf("Please choose a transaction type:\n O-Open Account \n B-Balance Inquiry \n D-Deposit \n W-Withdrawal \n C-Close Account \n I-Interest \n P-Print \n E-Exit \n");
         char c;
         scanf(" %c", &c);
-
-        printf("probe c: %c \n", c);
         switch (c)
         {
         case 'O':
@@ -57,6 +56,7 @@ int bankCMD()
     }
     return 0;
 }
+
 int ScreenRead()
 {
     return 0;
