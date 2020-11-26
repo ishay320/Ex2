@@ -22,4 +22,4 @@ main.o: main.c myBank.h
 .PHONY: clean dynamic static all
 
 clean:
-	rm -f *.o *.so maind mains
+	rm -f *.o *.so *.a maind mains
