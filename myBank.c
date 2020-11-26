@@ -143,6 +143,12 @@ int withdraw(double bankAccount[50][2])
         printf("Input failed\n");
         return 0;
     }
+    if (amount<0)
+    {
+        printf("You cannot withdraw minus amount of money \n");
+        return 0;
+    }
+    
     if (bankAccount[number][1] - amount < 0)
     {
         printf("You cannot withdraw that much money you dont have enough \n");
@@ -199,11 +205,17 @@ int accountInput(double bankAccount[50][2])
         return -1;
     }
     number -= 901;
-    if (number<0 | number> 50 | bankAccount[number][0] == false) //input check
+    if (number<0 | number> 50) //input check
     {
         printf("Input failed\n");
         return -1;
     }
+    if (bankAccount[number][0] == false)
+    {
+        printf("This account is closed \n");
+        return -1;
+    }
+    
     return number;
 }
 
