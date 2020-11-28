@@ -1,13 +1,25 @@
 #include <stdio.h>
 
+
+int bankCMD();
+int accountInput(double bankAccount[50][2]);
+int Initial(double bankAccount[50][2]);
+int checkAccount(double bankAccount[50][2]);
+int deposit(double bankAccount[50][2]);
+int withdraw(double bankAccount[50][2]);
+int close(double bankAccount[50][2]);
+int interest(double bankAccount[50][2]);
+int accountInput(double bankAccount[50][2]);
+int print(double bankAccount[50][2]);
+int exitE(double bankAccount[50][2]);
+
 enum bool
 {
     false,
     true
 };
 
-int bankCMD()
-{
+int bankCMD(){
     double bankAccount[50][2];
     for (int i = 0; i < 50; i++) //zero the bank setting
     {
@@ -47,7 +59,7 @@ int bankCMD()
             print(bankAccount);
             break;
         case 'E':
-            exit(bankAccount);
+            exitE(bankAccount);
             keepRunning = 0;
             break;
         default:
@@ -231,7 +243,7 @@ int print(double bankAccount[50][2])
     return 0;
 }
 
-int exit(double bankAccount[50][2])
+int exitE(double bankAccount[50][2])
 {
     for (int i = 0; i < 50; i++)
     {
