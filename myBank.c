@@ -216,7 +216,7 @@ int interest(double bankAccount[50][2])
     if (read == 0) //check the input
     {
         printf("Failed to read the interest rate\n");
-        return -1;
+        return 0;
     }
     if (amount < 0)
     {
