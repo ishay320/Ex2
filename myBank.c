@@ -31,7 +31,7 @@ int bankCMD(){
     while (keepRunning)
     {
 
-        printf("\nPlease choose a transaction type:\n O-Open Account \n B-Balance Inquiry \n D-Deposit \n W-Withdrawal \n C-Close Account \n I-Interest \n P-Print \n E-Exit \n");
+        printf("\nPlease choose a transaction type:\n O-Open Account\n B-Balance Inquiry\n D-Deposit\n W-Withdrawal\n C-Close Account\n I-Interest\n P-Print\n E-Exit\n");
         char c;
         scanf(" %c", &c);
         switch (c)
@@ -191,7 +191,7 @@ int close(double bankAccount[50][2])
         return -1;
     }
     number -= 901;
-    if (number<0 | number> 50) //input check
+    if (number<0 | number> 49) //input check
     {
         printf("Invalid account number\n");
         return -1;
@@ -244,7 +244,7 @@ int accountInput(double bankAccount[50][2])
         return -1;
     }
     number -= 901;
-    if (number<0 | number> 50) //input check
+    if (number<0 | number> 49) //input check
     {
         printf("Invalid account number\n");
         return -1;
