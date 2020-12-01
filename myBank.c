@@ -211,8 +211,8 @@ int close(double bankAccount[50][2])
 int interest(double bankAccount[50][2])
 {
     printf("Please enter interest rate: ");
-    double amount = 0;
-    int read = scanf(" %lf", &amount);
+    int amount = 0;
+    int read = scanf(" %d", &amount);
     if (read == 0) //check the input
     {
         printf("Failed to read the interest rate\n");
@@ -227,7 +227,7 @@ int interest(double bankAccount[50][2])
     {
         if (bankAccount[i][0] == true)
         {
-            bankAccount[i][1] += bankAccount[i][1] * (amount/100);
+            bankAccount[i][1] += bankAccount[i][1] * ((double)amount/100);
         }
     }
     return 0;
