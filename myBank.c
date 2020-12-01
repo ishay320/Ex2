@@ -144,6 +144,7 @@ int deposit(double bankAccount[50][2])
     if (amount <0)
     {
         printf("Cannot deposit a negative amount\n");
+        return -1;
     }
     
     bankAccount[number][1] += amount;
@@ -165,11 +166,6 @@ int withdraw(double bankAccount[50][2])
     if (read == 0) //check the input
     {
         printf("Input failed\n");
-        return 0;
-    }
-    if (amount<0)
-    {
-        printf("Cannot withdraw a negative amount\n");
         return 0;
     }
     
@@ -220,13 +216,13 @@ int interest(double bankAccount[50][2])
     if (read == 0) //check the input
     {
         printf("Failed to read the interest rate\n");
-        return 0;
+        return -1;
     }
-    if (amount <0)
+    if (amount < 0)
     {
-        print("Invalid interest rate\n");
+        printf("Invalid interest rate\n");
+        return -1;
     }
-    
     for (int i = 0; i < 50; i++)
     {
         if (bankAccount[i][0] == true)
